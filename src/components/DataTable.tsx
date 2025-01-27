@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ArrowUpDown,
   Download,
@@ -67,7 +67,7 @@ export const DataTable: React.FC<TableProps> = ({ data, columns }) => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "table-data.csv";
+    a.download = "test-table.csv";
     a.click();
     window.URL.revokeObjectURL(url);
   };
